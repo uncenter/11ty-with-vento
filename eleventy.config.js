@@ -1,7 +1,5 @@
 const vento = require("ventojs").default;
-const vto = vento({
-	includes: "./src/_includes",
-});
+const vto = vento();
 
 module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/css");
@@ -10,10 +8,10 @@ module.exports = function (eleventyConfig) {
 
 	eleventyConfig.addTemplateFormats("vto");
 	eleventyConfig.addExtension("vto", {
-		compile: async (inputContent) => {
+		compile: async (content, path) => {
 			return async (data) => {
-				const { content } = await vto.runString(inputContent, data);
-				return content;
+				const result = await vto.runString(content, data);
+				return result.content;
 			};
 		},
 	});
