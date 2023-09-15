@@ -1,0 +1,11 @@
+{
+	"name": "11ty-with-vento",
+	"scripts": {
+		"dev": "eleventy --serve",
+		"build": "eleventy"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"ventojs": "^0.8.1"
+	}
+}
