@@ -1,37 +1,30 @@
-# create-eleventy-app
+# 11ty-with-vento
 
-This is a starter template for [Eleventy](https://www.11ty.dev/).
-You can check out the [Eleventy documentation](https://www.11ty.dev/docs/) or join the [Eleventy community on Discord](https://discord.gg/GBkBy9u) to get help or ask questions.
+This is an experiment with using the [Vento](https://github.com/oscarotero/vento) templating engine instead of Nunjucks.
 
 ## Usage
 
 **Start the development server**:
 
 ```sh
-pnpm run start
+pnpm dev
 ```
 
 **Build the site for production**:
 
 ```sh
-pnpm run build
-```
-
-**Clean the output directory**:
-
-```sh
-pnpm run clean
+pnpm build
 ```
 
 ## Customizing
 
 ### Adding a new page
 
-To add a new page, create a new file in the `src` directory. For example, to create a new page at the URL `/about`, create a file at `src/about.md`.
+To add a new page, create a new file in the `src` directory. For example, to create a new page at the URL `/about`, create a file at `src/about.{md,vto}`.
 
 ### Adding a new layout
 
-To add a new layout, create a new file in the `src/_includes` directory. For example, to create a new layout for posts, create a file at `src/_includes/post.njk`.
+To add a new layout, create a new file in the `src/_includes` directory. For example, to create a new layout for posts, create a file at `src/_includes/post.vto`.
 
 ### Modifying site metadata
 
