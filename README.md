@@ -1,6 +1,9 @@
 # 11ty-with-vento
 
-This is an experiment with using the [Vento](https://github.com/oscarotero/vento) templating engine instead of Nunjucks.
+> [!WARNING]
+> This is a work-in-progress! Currently only basic template support is included but I'm working on feature parity with built-in template languages in 11ty like Nunjucks.
+
+This is an experiment with using the [Vento](https://github.com/oscarotero/vento) templating engine instead of Nunjucks/Liquid/etc.
 
 ## Usage
 
