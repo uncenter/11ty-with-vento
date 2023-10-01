@@ -6,6 +6,9 @@ module.exports = function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy("src/assets/js");
 	eleventyConfig.addPassthroughCopy("src/assets/img");
 
+	Object.entries(eleventyConfig.javascriptFunctions).forEach(([name, func]) => {
+		vto.filters[name] = func;
+	});
 	eleventyConfig.addTemplateFormats("vto");
 	eleventyConfig.addExtension("vto", {
 		compile: async (content, path) => {
